@@ -17,7 +17,7 @@ app.use(
 );
 
 app.get("/", (req, res) => {
-  res.send("HELLO HI");
+  res.send("HELLO WORLD");
 });
 
 app.listen(app.get("port"), () => {
