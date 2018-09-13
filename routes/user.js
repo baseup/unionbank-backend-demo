@@ -41,8 +41,8 @@ router.get("/balance", function(req, res) {
       url: `${settings.base_url}accounts/v1/balances`,
       method: "GET",
       headers: {
+        Accept: headers.accept,
         Authorization: headers.authorization,
-        "Content-Type": headers.accept,
         "x-ibm-client-id": settings.client_id,
         "x-ibm-client-secret": settings.client_secret
       }
@@ -68,8 +68,8 @@ router.get("/information", function(req, res) {
       url: `${settings.base_url}accounts/v1/info`,
       method: "GET",
       headers: {
+        Accept: headers.accept,
         Authorization: headers.authorization,
-        Accept: headers["content-type"],
         "x-ibm-client-id": settings.client_id,
         "x-ibm-client-secret": settings.client_secret
       }
