@@ -33,7 +33,7 @@ router.post("/sandbox", function(req, res) {
   );
 });
 
-router.post("/balance", function(req, res) {
+router.get("/balance", function(req, res) {
   const headers = req.headers;
 
   request(
