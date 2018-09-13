@@ -6,8 +6,8 @@ const express = require("express");
 const bodyParser = require("body-parser");
 const app = express();
 
+const user = require("./routes/user");
 const oauth = require("./routes/oauth");
-const users = require("./routes/user");
 const settings = require("./lib/settings");
 
 app.use(cors());
@@ -20,7 +20,7 @@ app.use(
 );
 
 // Routes
-app.use("/users", users);
+app.use("/user", user);
 app.use("/oauth", oauth);
 
 app.get("/", function(req, res) {
