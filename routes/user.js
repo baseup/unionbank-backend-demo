@@ -69,7 +69,7 @@ router.get("/information", function(req, res) {
       method: "GET",
       headers: {
         Authorization: headers.authorization,
-        "Content-Type": headers["content-type"],
+        Accept: headers["content-type"],
         "x-ibm-client-id": settings.client_id,
         "x-ibm-client-secret": settings.client_secret
       }
