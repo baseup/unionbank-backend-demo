@@ -11,7 +11,7 @@ router.post("/transfer", function(req, res) {
   const body = req.body;
 
   let options = {
-    url: `${settings.base_url}convergent/v1/oauth2/token`,
+    url: `${settings.base_url}online/v1/transfers/single`,
     headers: {
       Authorization: headers.authorization,
       Accept: headers.accept,
