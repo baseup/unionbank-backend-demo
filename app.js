@@ -21,12 +21,13 @@ app.get("/", (req, res) => {
 });
 
 app.get("/login", (req, res) => {
-  const body = req.body;
+  const body = req.query;
 
+  console.log(process.env);
   request(
     {
       uri: `https://api-uat.unionbankph.com/partners/sb/convergent/v1/oauth2/authorize?client_id=${
-        body.client_id
+        process.env.CLIENT_ID
       }&response_type=${body.response_type}&scope=${body.scope}&redirect_uri=${
         body.redirect_uri
       }`,
