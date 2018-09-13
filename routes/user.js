@@ -42,7 +42,7 @@ router.get("/balance", function(req, res) {
       method: "GET",
       headers: {
         Authorization: headers.authorization,
-        "Content-Type": headers["content-type"],
+        "Content-Type": headers.accept,
         "x-ibm-client-id": settings.client_id,
         "x-ibm-client-secret": settings.client_secret
       }

@@ -25,7 +25,6 @@ router.get("/token", function(req, res) {
     };
 
     request(options, function(err, response, body) {
-      console.log("RESPONSE: ", response);
       if (!err) {
         console.log("Error", err);
       }
