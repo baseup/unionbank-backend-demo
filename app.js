@@ -30,7 +30,7 @@ app.get("/", function(req, res) {
     settings.base_url
   }/convergent/v1/oauth2/authorize?client_id=${settings.client_id}&scope=${
     query.scope
-  }&response_type=token&redirect_uri=${query.redirect_uri}`;
+  }&response_type=${query.response_type}&redirect_uri=${query.redirect_uri}`;
 
   res.status(200).send({ link: redirect_link });
 });
