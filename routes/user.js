@@ -11,7 +11,7 @@ router.post("/sandbox", function(req, res) {
 
   request(
     {
-      url: `${settings.base_url}/sandbox/v1/accounts`,
+      url: `${settings.base_url}sandbox/v1/accounts`,
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -38,7 +38,7 @@ router.get("/balance", function(req, res) {
 
   request(
     {
-      url: `${settings.base_url}/accounts/v1/balances`,
+      url: `${settings.base_url}accounts/v1/balances`,
       method: "GET",
       headers: {
         Authorization: headers.authorization,
@@ -65,7 +65,7 @@ router.get("/information", function(req, res) {
 
   request(
     {
-      url: `${settings.base_url}/accounts/v1/info`,
+      url: `${settings.base_url}accounts/v1/info`,
       method: "GET",
       headers: {
         Authorization: headers.authorization,
