@@ -60,19 +60,19 @@ router.get("/balance", function(req, res) {
   );
 });
 
-router.post("/sanbox", function(req, res, next) {
-  const body = req.body;
+router.get("/information", function(req, res) {
+  const headers = req.headers;
 
   request(
     {
-      url: `${settings.base_url}/sandbox/v1/accounts`,
-      method: "POST",
+      url: `${settings.base_url}/accounts/v1/info`,
+      method: "GET",
       headers: {
-        "Content-Type": "application/json",
+        Authorization: headers.authorization,
+        "Content-Type": headers["content-type"],
         "x-ibm-client-id": settings.client_id,
         "x-ibm-client-secret": settings.client_secret
-      },
-      body: JSON.stringify(body)
+      }
     },
     (error, response, body) => {
       if (error) {
