@@ -57,8 +57,6 @@ router.get("/token", function(req, res, next) {
       form: {
         client_id: settings.client_id,
         code: req.query.code,
-        redirect_uri:
-          "https://unionbank-backend-demo.herokuapp.com/oauth/redirect",
         grant_type: "authorization_code"
       }
     };
