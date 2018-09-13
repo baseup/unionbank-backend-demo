@@ -3,12 +3,11 @@
 
 const cors = require("cors");
 const express = require("express");
-const request = require("request");
 const bodyParser = require("body-parser");
 const app = express();
 
 const oauth = require("./routes/oauth");
-const users = require("./routes/users");
+const users = require("./routes/user");
 const settings = require("./lib/settings");
 
 app.use(cors());
