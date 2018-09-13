@@ -11,12 +11,12 @@ router.post("/sanbox", function(req, res, next) {
 
   request(
     {
-      url: `${settings.ubp.base_url}/sandbox/v1/accounts`,
+      url: `${settings.base_url}/sandbox/v1/accounts`,
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        "x-ibm-client-id": settings.ubp.client_id,
-        "x-ibm-client-secret": settings.ubp.client_secret
+        "x-ibm-client-id": settings.client_id,
+        "x-ibm-client-secret": settings.client_secret
       },
       body: JSON.stringify(body)
     },
@@ -32,7 +32,7 @@ router.post("/sanbox", function(req, res, next) {
     }
   );
 
-  res.send({});
+  // res.send({});
 });
 
 module.exports = router;

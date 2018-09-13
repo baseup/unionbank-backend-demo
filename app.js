@@ -25,7 +25,14 @@ app.use("/users", users);
 app.use("/oauth", oauth);
 
 app.get("/", function(req, res) {
-  res.send("Hello world");
+  const query = req.query;
+  const redirect_link = `${
+    settings.base_url
+  }/convergent/v1/oauth2/authorize?client_id=${settings.client_id}&scope=${
+    query.scope
+  }&response_type=code&redirect_uri=${query.redirect_uri}`;
+
+  res.status(200).send({ link: redirect_link });
 });
 
 module.exports = app;
