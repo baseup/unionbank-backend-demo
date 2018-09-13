@@ -14,7 +14,9 @@ router.post("/sanbox", function(req, res, next) {
       url: `${settings.ubp.base_url}/sandbox/v1/accounts`,
       method: "POST",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "application/json",
+        "x-ibm-client-id": settings.ubp.client_id,
+        "x-ibm-client-secret": settings.ubp.client_secret
       },
       body: JSON.stringify(body)
     },
