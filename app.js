@@ -8,6 +8,7 @@ const app = express();
 
 const user = require("./routes/user");
 const oauth = require("./routes/oauth");
+const online = require("./routes/online");
 const settings = require("./lib/settings");
 
 app.use(cors());
@@ -22,6 +23,7 @@ app.use(
 // Routes
 app.use("/user", user);
 app.use("/oauth", oauth);
+app.use("/online", online);
 
 app.get("/", function(req, res) {
   const query = req.query;
